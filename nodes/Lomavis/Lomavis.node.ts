@@ -7,6 +7,7 @@ import type {
 	JsonObject,
 } from 'n8n-workflow';
 import { NodeConnectionTypes, NodeOperationError, NodeApiError } from 'n8n-workflow';
+import { competitorDescription } from './resources/competitor';
 import { profileGroupDescription } from './resources/profileGroup';
 import { postDescription } from './resources/post';
 import { mediaDescription } from './resources/media';
@@ -48,6 +49,10 @@ export class Lomavis implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
+						name: 'Competitor',
+						value: 'competitor',
+					},
+					{
 						name: 'Media',
 						value: 'media',
 					},
@@ -62,6 +67,7 @@ export class Lomavis implements INodeType {
 				],
 				default: 'profileGroup',
 			},
+			...competitorDescription,
 			...profileGroupDescription,
 			...postDescription,
 			...mediaDescription,

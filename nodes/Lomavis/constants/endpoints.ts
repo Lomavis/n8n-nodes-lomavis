@@ -11,6 +11,9 @@ export const ENDPOINTS = {
 	// Approval Process endpoints
 	APPROVAL_PROCESSES: '/approvalprocesses/',
 
+	// Competitor endpoints
+	COMPETITORS: '/competitors/',
+
 	// Media endpoints
 	MEDIA: '/media/',
 	MEDIA_BY_UUID: (uuid: string) => `/media/${uuid}/`,

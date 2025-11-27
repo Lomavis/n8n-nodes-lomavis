@@ -3,8 +3,9 @@ import { postCreateDescription, executePostCreate } from './create';
 import { createDraftAndSendApprovalDescription, executePostCreateDraftAndSendApproval } from './createDraftAndSendApproval';
 import { postDeleteDescription, executePostDelete } from './delete';
 import { postListByStatusDescription, executePostListByStatus } from './listByStatus';
+import { postSendApprovalDescription, executePostSendApproval } from './sendApproval';
 
-export { executePostCreate, executePostCreateDraftAndSendApproval, executePostDelete, executePostListByStatus };
+export { executePostCreate, executePostCreateDraftAndSendApproval, executePostDelete, executePostListByStatus, executePostSendApproval };
 
 const showOnlyForPosts = {
 	resource: ['post'],
@@ -50,6 +51,12 @@ export const postDescription: INodeProperties[] = [
 					},
 				},
 			},
+			{
+				name: 'Send Approval',
+				value: 'sendApproval',
+				action: 'Send post for approval',
+				description: 'Send an existing post for approval',
+			},
 		],
 		default: 'listByStatus',
 	},
@@ -57,4 +64,5 @@ export const postDescription: INodeProperties[] = [
 	...createDraftAndSendApprovalDescription,
 	...postDeleteDescription,
 	...postListByStatusDescription,
+	...postSendApprovalDescription,
 ];

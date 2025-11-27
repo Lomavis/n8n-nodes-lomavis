@@ -1,7 +1,8 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { profileGroupListDescription, executeProfileGroupList } from './list';
+import { profileGroupSearchDescription, executeProfileGroupSearch } from './search';
 
-export { executeProfileGroupList };
+export { executeProfileGroupList, executeProfileGroupSearch };
 
 const showOnlyForProfileGroups = {
 	resource: ['profileGroup'],
@@ -29,8 +30,15 @@ export const profileGroupDescription: INodeProperties[] = [
 					},
 				},
 			},
+			{
+				name: 'Search',
+				value: 'search',
+				action: 'Search profile groups',
+				description: 'Search profile groups by email or name',
+			},
 		],
 		default: 'list',
 	},
 	...profileGroupListDescription,
+	...profileGroupSearchDescription,
 ];

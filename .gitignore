@@ -42,3 +42,6 @@ coverage/
 .cursor/
 .copilot/
 .aider*
+
+
+automation_integrations/
