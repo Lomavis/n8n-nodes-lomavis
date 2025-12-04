@@ -82,6 +82,7 @@ export const postCreateDescription: INodeProperties[] = [
 		name: 'postStatus',
 		type: 'options',
 		required: true,
+		default: POST_STATUS.DRAFT,
 		displayOptions: {
 			show: showOnlyForPostCreate,
 		},
@@ -95,7 +96,6 @@ export const postCreateDescription: INodeProperties[] = [
 				value: POST_STATUS.READY,
 			},
 		],
-		default: POST_STATUS.DRAFT,
 		description: 'Status to assign to the newly created post',
 	},
 	{

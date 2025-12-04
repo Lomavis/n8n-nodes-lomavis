@@ -102,6 +102,7 @@ export const postSendApprovalDescription: INodeProperties[] = [
 		name: 'stepMode',
 		type: 'options',
 		required: true,
+		default: APPROVAL_STEP_MODE.SINGLE_STEP,
 		displayOptions: {
 			show: {
 				resource: ['post'],
@@ -112,7 +113,6 @@ export const postSendApprovalDescription: INodeProperties[] = [
 			{ name: 'Single Step', value: APPROVAL_STEP_MODE.SINGLE_STEP },
 			{ name: 'Multi Step', value: APPROVAL_STEP_MODE.MULTI_STEP },
 		],
-		default: APPROVAL_STEP_MODE.SINGLE_STEP,
 		description: 'Choose between single step or multi-step approval process',
 	},
 	{
@@ -159,6 +159,7 @@ export const postSendApprovalDescription: INodeProperties[] = [
 		name: 'approvalStep1UsersRule',
 		type: 'options',
 		required: true,
+		default: APPROVAL_RULE.ALL_USERS_MUST_APPROVE,
 		displayOptions: {
 			show: {
 				resource: ['post'],
@@ -169,7 +170,6 @@ export const postSendApprovalDescription: INodeProperties[] = [
 			{ name: 'All Users Must Approve', value: APPROVAL_RULE.ALL_USERS_MUST_APPROVE },
 			{ name: 'Any User Can Approve', value: APPROVAL_RULE.ANY_USER_CAN_APPROVE },
 		],
-		default: APPROVAL_RULE.ALL_USERS_MUST_APPROVE,
 		description: 'Specify whether all users or any single user needs to approve in step 1',
 	},
 	{
