@@ -81,7 +81,6 @@ export const postCreateDescription: INodeProperties[] = [
 		displayName: 'Post Status',
 		name: 'postStatus',
 		type: 'options',
-		default: '',
 		required: true,
 		displayOptions: {
 			show: showOnlyForPostCreate,

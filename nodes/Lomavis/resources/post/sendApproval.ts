@@ -101,7 +101,6 @@ export const postSendApprovalDescription: INodeProperties[] = [
 		displayName: 'Approval Mode',
 		name: 'stepMode',
 		type: 'options',
-		default: '',
 		required: true,
 		displayOptions: {
 			show: {
@@ -159,7 +158,6 @@ export const postSendApprovalDescription: INodeProperties[] = [
 		displayName: 'Step 1 Approval Rule',
 		name: 'approvalStep1UsersRule',
 		type: 'options',
-		default: '',
 		required: true,
 		displayOptions: {
 			show: {
